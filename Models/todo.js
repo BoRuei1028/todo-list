@@ -9,4 +9,5 @@ const todoSchema = new Schema({
     type: Boolean
   }
 })
+//匯出
 module.exports = mongoose.model('Todo', todoSchema)
