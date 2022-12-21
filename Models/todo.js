@@ -6,7 +6,8 @@ const todoSchema = new Schema({
     required: true
   },
   done: {
-    type: Boolean
+    type: Boolean,
+    default: false
   }
 })
 //匯出
