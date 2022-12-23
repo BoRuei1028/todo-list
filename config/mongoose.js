@@ -2,10 +2,12 @@ const mongoose = require('mongoose')
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
-}// 僅在非正式環境時, 使用 dotenv
+}
+// require('dotenv').config()
+// console.log(process.env)
 
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/todo-list'
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-
 const db = mongoose.connection
 
 db.on('error', () => {
