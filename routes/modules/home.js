@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Todo = require('../../Models/todo')
+const Todo = require('../../models/todo')
 router.get('/', (req, res) => {
   Todo.find()
     .lean()
